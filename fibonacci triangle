@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+    int j, i, n,f[50];
+    f[0]=1;
+    f[1]=1;
+    printf("enter the row:");
+    scanf("%d",&n);
+    for(i=0;i<=n;i++)
+    {
+       for(j=2;j<=n;j++)
+       {
+            f[j]=f[j-1]+f[j-2];
+            }
+         }
+     for(i=0;i<=n;i++)
+     {
+       for(j=0;j<i;j++)
+        {
+        printf(" %d",f[j]);
+        }
+        printf("\n");
+        }
+        }
